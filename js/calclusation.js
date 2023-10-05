@@ -59,3 +59,43 @@ document.getElementById('btn-parallelogram').addEventListener('click', function 
     setElementValueById('parallelogram-total', parallelogramIs);
     document.getElementById('li3').style.display = 'block';
 })
+
+
+// rhombus Calculation is here -----------------
+document.getElementById('btn-rhombus').addEventListener('click', function () {
+    const rhombusD1 = getFiledValueById('rhombus-d1-filed');
+    const rhombusD2 = getFiledValueById('rhombus-d2-filed');
+    const rhombusString = (0.5 * rhombusD1 * rhombusD2).toFixed(2);
+    const rhombusIs = parseFloat(rhombusString);
+
+    if (isNaN(rhombusIs)) {
+        alert('Please Enter Number Please')
+        return;
+    }
+    else if (rhombusIs < 0) {
+        alert('Please Enter Number Please')
+        return;
+    }
+    setElementValueById('rhombus-total', rhombusIs);
+    document.getElementById('li4').style.display = 'block';
+})
+
+
+// rhombus Calculation is here -----------------
+document.getElementById('btn-rhombus').addEventListener('click', function () {
+    const rhombusD1 = getFiledValueById('rhombus-d1-filed');
+    const rhombusD2 = getFiledValueById('rhombus-d2-filed');
+    const rhombusString = (0.5 * rhombusD1 * rhombusD2).toFixed(2);
+    const rhombusIs = parseFloat(rhombusString);
+
+    if (isNaN(rhombusIs)) {
+        alert('Please Enter Number Please')
+        return;
+    }
+    else if (rhombusIs < 0) {
+        alert('Please Enter Number Please')
+        return;
+    }
+    setElementValueById('rhombus-total', rhombusIs);
+    document.getElementById('li4').style.display = 'block';
+})
