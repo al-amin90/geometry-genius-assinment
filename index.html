@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Geometry Genius</title>
+    <link rel="stylesheet" href="style.css">
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
@@ -15,90 +16,96 @@
             <h4 class="text-4xl">Geometry Genius</h4>
         </div>
         <button class="block text-3xl my-3 text-white rounded-lg bg-blue-600 px-9">Blog</button>
+
     </header>
     <main>
+
         <div class="grid grid-cols-4 gap-4">
             <!-- Triangle card  -->
             <div class="text-center border-2 p-10">
                 <img class="mx-auto" src="images/triangle.png" alt="">
                 <h5 class="mb-1 text-3xl font-medium text-gray-900 mt-10 dark:text-white">Triangle</h5>
                 <h6 class="text-xl text-gray-500 dark:text-gray-400 mt-2.5 mb-5">Area (A) = 0.5 * b * h</h6>
+
                 <div>
                     <input id="tri-b-filed" class="py-1 px-3 mx-2 bg-slate-100 w-3/12" type="text" name=""
                         placeholder="b" id=""><span>cm</span>
                     <input id="tri-h-filed" class="py-1 px-3 mx-2 bg-slate-100 w-3/12" type="text" name=""
                         placeholder="h" id=""><span>cm</span>
-
                 </div>
                 <button id="btn-triangle"
                     class="block text-3xl w-full py-3 text-white rounded-lg bg-blue-600 px-9 mt-10 ">Calculate</button>
             </div>
+
+            <!-- Rectangle card  -->
             <div class="text-center border-2 p-10">
                 <img class="mx-auto" src="images/rectangle.png" alt="">
                 <h5 class="mb-1 text-3xl font-medium text-gray-900 mt-10 dark:text-white">Rectangle</h5>
                 <h6 class="text-xl text-gray-500 dark:text-gray-400 mt-2.5 mb-5">Area (A) = w * i</h6>
+
                 <div>
                     <input class="py-1 px-3 mx-2 bg-slate-100 w-3/12" type="text" name="" placeholder="w"
-                        id=""><span>cm</span>
+                        id="rac-w-filed"><span>cm</span>
                     <input class="py-1 px-3 mx-2 bg-slate-100 w-3/12" type="text" name="" placeholder="l"
-                        id=""><span>cm</span>
-
+                        id="rac-l-filed"><span>cm</span>
                 </div>
-                <button
+                <button id="btn-rectangle"
                     class="block text-3xl w-full py-3 py-2 text-white rounded-lg bg-blue-600 px-9 mt-10 ">Calculate</button>
             </div>
+            <!-- parallelogram card  -->
             <div class="text-center border-2 p-10">
                 <img class="mx-auto" src="images/parallelogram.png" alt="">
                 <h5 class="mb-1 text-3xl font-medium text-gray-900 mt-10 dark:text-white">Parallelogram</h5>
                 <h6 class="text-xl text-gray-500 dark:text-gray-400 mt-2.5 mb-5">Area (A) = b * h</h6>
                 <div>
-                    <input class="py-1 px-3 mx-2 bg-slate-100 w-3/12" type="text" name="" placeholder="b"
+                    <input id="paralle-b-filed" class="py-1 px-3 mx-2 bg-slate-100 w-3/12" type="text" name="" placeholder="b"
                         id=""><span>cm</span>
-                    <input class="py-1 px-3 mx-2 bg-slate-100 w-3/12" type="text" name="" placeholder="h"
+                    <input id="paralle-h-filed" class="py-1 px-3 mx-2 bg-slate-100 w-3/12" type="text" name="" placeholder="h"
                         id=""><span>cm</span>
 
                 </div>
-                <button
+                <button id="btn-parallelogram"
                     class="block text-3xl w-full py-3 py-2 text-white rounded-lg bg-blue-600 px-9 mt-10 ">Calculate</button>
             </div>
             <!-- Area Calculation  -->
             <div class="text-center border-2 p-10">
                 <h5 class="mb-6 text-3xl font-bold text-gray-900 mt-5 dark:text-white underline ">Area Calculation</h5>
                 <ol id="ol-calculation" class="list-decimal	text-xl ">
-                    <!-- Triangle card  -->
-                    <li class="hidden">
+                    <!-- Triangle  -->
+                    <li id="li1" class="row-item">
                         <div class="mb-3 flex justify-between">
                             Triangle <span id="triangle-total">0</span> <button class="bg-blue-500 rounded-lg text-white py-1 px-3">Covert
                                 to m<sup>2</sup></button>
                         </div>
                     </li>
-                    <!-- Rhombus card -->
-                    <li class="hidden">
+                    <!-- rectangle -->
+                    <li id="li2" class="row-item">
                         <div class="mb-3 flex justify-between">
-                            Rhombus <span>0</span> <button class="bg-blue-500 rounded-lg text-white py-1 px-3">Covert to
+                            rectangle <span id="rectangle-total">0</span> <button class="bg-blue-500 rounded-lg text-white py-1 px-3">Covert to
                                 m<sup>2</sup></button>
                         </div>
                     </li>
-                    <li class="hidden">
+                    <!-- Parallelogram  -->
+                    <li id="li3" class="row-item">
                         <div class="mb-3 flex justify-between">
-                            Parallelogram <span>0</span> <button
+                            Parallelogram <span  id="parallelogram-total">0</span> <button
                                 class="bg-blue-500 rounded-lg text-white py-1 px-3">Covert to
                                 m<sup>2</sup></button>
                         </div>
                     </li>
-                    <li class="hidden">
+                    <li id="li4" class="row-item">
                         <div class="mb-3 flex justify-between">
                             Rhombus <span>0</span> <button class="bg-blue-500 rounded-lg text-white py-1 px-3">Covert to
                                 m<sup>2</sup></button>
                         </div>
                     </li>
-                    <li class="hidden">
+                    <li id="li5" class="row-item">
                         <div class="mb-3 flex justify-between">
                             Pentagon <span>0</span> <button class="bg-blue-500 rounded-lg text-white py-1 px-3">Covert
                                 to m<sup>2</sup></button>
                         </div>
                     </li>
-                    <li class="hidden">
+                    <li id="li6" class="row-item">
                         <div class="mb-3 flex justify-between">
                             Ellipse <span>0</span> <button class="bg-blue-500 rounded-lg text-white py-1 px-3">Covert to
                                 m<sup>2</sup></button>
@@ -114,12 +121,12 @@
                 <h6 class="text-xl text-gray-500 dark:text-gray-400 mt-2.5 mb-5">Area (A) = 0.5 * d1 * d2</h6>
                 <div>
                     <input class="py-1 px-3 mx-2 bg-slate-100 w-3/12" type="text" name="" placeholder="d1"
-                        id=""><span>cm</span>
+                        id="rhombus"><span>cm</span>
                     <input class="py-1 px-3 mx-2 bg-slate-100 w-3/12" type="text" name="" placeholder="d2"
                         id=""><span>cm</span>
 
                 </div>
-                <button
+                <button id="btn-rhombus"
                     class="block text-3xl w-full py-3 py-2 text-white rounded-lg bg-blue-600 px-9 mt-10 ">Calculate</button>
             </div>
             <!-- Pentagon card -->
