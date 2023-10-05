@@ -100,15 +100,16 @@
                                 m<sup>2</sup></button>
                         </div>
                     </li>
+                    <!-- Pentagon -->
                     <li id="li5" class="row-item">
                         <div class="mb-3 flex justify-between">
-                            Pentagon <span>0</span> <button class="bg-blue-500 rounded-lg text-white py-1 px-3">Covert
+                            Pentagon <span id="pentagon-total">0</span> <button class="bg-blue-500 rounded-lg text-white py-1 px-3">Covert
                                 to m<sup>2</sup></button>
                         </div>
                     </li>
                     <li id="li6" class="row-item">
                         <div class="mb-3 flex justify-between">
-                            Ellipse <span>0</span> <button class="bg-blue-500 rounded-lg text-white py-1 px-3">Covert to
+                            Ellipse <span id="ellipse-total">0</span> <button class="bg-blue-500 rounded-lg text-white py-1 px-3">Covert to
                                 m<sup>2</sup></button>
                         </div>
                     </li>
@@ -137,12 +138,12 @@
                 <h6 class="text-xl text-gray-500 dark:text-gray-400 mt-2.5 mb-5">Area (A) = 0.5 * p * b</h6>
                 <div>
                     <input class="py-1 px-3 mx-2 bg-slate-100 w-3/12" type="text" name="" placeholder="p"
-                        id=""><span>cm</span>
+                        id="pentagon-p-filed"><span>cm</span>
                     <input class="py-1 px-3 mx-2 bg-slate-100 w-3/12" type="text" name="" placeholder="b"
-                        id=""><span>cm</span>
+                        id="pentagon-b-filed"><span>cm</span>
 
                 </div>
-                <button
+                <button id="btn-pentagon"
                     class="block text-3xl w-full py-3 py-2 text-white rounded-lg bg-blue-600 px-9 mt-10 ">Calculate</button>
             </div>
             <!-- Ellipse card  -->
@@ -152,12 +153,12 @@
                 <h6 class="text-xl text-gray-500 dark:text-gray-400 mt-2.5 mb-5">Area (A) = pi * a * b</h6>
                 <div>
                     <input class="py-1 px-3 mx-2 bg-slate-100 w-3/12" type="text" name="" placeholder="a"
-                        id=""><span>cm</span>
+                        id="ellipse-a-filed"><span>cm</span>
                     <input class="py-1 px-3 mx-2 bg-slate-100 w-3/12" type="text" name="" placeholder="b"
-                        id=""><span>cm</span>
+                        id="ellipse-b-filed"><span>cm</span>
 
                 </div>
-                <button
+                <button id="btn-ellipse"
                     class="block text-3xl w-full py-3 py-2 text-white rounded-lg bg-blue-600 px-9 mt-10 ">Calculate</button>
             </div>
 

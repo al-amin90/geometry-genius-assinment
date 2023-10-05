@@ -81,21 +81,41 @@ document.getElementById('btn-rhombus').addEventListener('click', function () {
 })
 
 
-// rhombus Calculation is here -----------------
-document.getElementById('btn-rhombus').addEventListener('click', function () {
-    const rhombusD1 = getFiledValueById('rhombus-d1-filed');
-    const rhombusD2 = getFiledValueById('rhombus-d2-filed');
-    const rhombusString = (0.5 * rhombusD1 * rhombusD2).toFixed(2);
-    const rhombusIs = parseFloat(rhombusString);
+// pentagon Calculation is here -----------------
+document.getElementById('btn-pentagon').addEventListener('click', function () {
+    const pentagonP = getFiledValueById('pentagon-p-filed');
+    const pentagonB = getFiledValueById('pentagon-b-filed');
+    const pentagonString = (0.5 * pentagonP * pentagonB).toFixed(2);
+    const pentagonIs = parseFloat(pentagonString);
 
-    if (isNaN(rhombusIs)) {
+    if (isNaN(pentagonIs)) {
         alert('Please Enter Number Please')
         return;
     }
-    else if (rhombusIs < 0) {
+    else if (pentagonIs < 0) {
         alert('Please Enter Number Please')
         return;
     }
-    setElementValueById('rhombus-total', rhombusIs);
-    document.getElementById('li4').style.display = 'block';
+    setElementValueById('pentagon-total', pentagonIs);
+    document.getElementById('li5').style.display = 'block';
+})
+
+
+// ellipse Calculation is here -----------------
+document.getElementById('btn-ellipse').addEventListener('click', function () {
+    const ellipseA = getFiledValueById('ellipse-a-filed');
+    const ellipseB = getFiledValueById('ellipse-b-filed');
+    const ellipseString = (3.1416 * ellipseA * ellipseB).toFixed(2);
+    const ellipseIs = parseFloat(ellipseString);
+
+    if (isNaN(ellipseIs)) {
+        alert('Please Enter Number Please')
+        return;
+    }
+    else if (ellipseIs < 0) {
+        alert('Please Enter Number Please')
+        return;
+    }
+    setElementValueById('ellipse-total', ellipseIs);
+    document.getElementById('li6').style.display = 'block';
 })
